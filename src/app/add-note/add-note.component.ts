@@ -15,8 +15,9 @@ export class AddNoteComponent implements OnInit {
   ngOnInit(): void {}
 
   onFormSubmit(form: NgForm) {
+    if (form.invalid) return alert('Form is invalid');
+
     const note = new Note(form.value.title, form.value.content);
-    console.log(note);
 
     this.noteService.addNote(note);
     this.router.navigateByUrl('/notes');
