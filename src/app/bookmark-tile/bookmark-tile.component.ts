@@ -11,6 +11,8 @@ export class BookmarkTileComponent implements OnInit {
 
   tileIconSrc: string;
 
+  faviconError: boolean;
+
   constructor() {}
 
   ngOnInit(): void {
