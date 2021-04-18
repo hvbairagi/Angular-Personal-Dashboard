@@ -4,7 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons");
 
 html {
   font-family: "Inter", sans-serif;
@@ -29,6 +29,10 @@ h1.is-bold,
 h2.is-bold {
   font-weight: bold;
   letter-spacing: -2px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -68,6 +72,8 @@ h2.is-bold {
 
 .btns-container {
   display: flex;
+  gap: 12px;
+
   margin-top: 20px;
 
   &.btns-centered {

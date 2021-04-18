@@ -1,22 +1,20 @@
 <div class="todos-wrapper">
   <div class="container">
-    <div class="todo-item completed">
-      <div class="check-box">
-        <i class="material-icons-outlined">check</i>
-      </div>
-      <p class="todo-text">This is todo text</p>
-    </div>
+    <app-todo-item
+      @todoItemAnim
+      *ngFor="let todo of todos"
+      [todo]="todo"
+      (click)="toggleCompleted(todo)"
+      (editClick)="onEditClick(todo)"
+      (deleteClick)="onDeleteClick(todo)"
+    >
+    </app-todo-item>
 
-    <div class="todo-item">
-      <div class="check-box">
-        <i class="material-icons-outlined">check</i>
-      </div>
-      <p class="todo-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo vel
-        repellat molestiae fuga magnam asperiores, consequuntur doloremque nulla
-        exercitationem, voluptatum ipsa aut animi ipsum perferendis atque,
-        fugiat ducimus commodi sed.
-      </p>
+    <div class="btns-container btns-centered">
+      <a routerLink="add" class="btn add-btn">
+        <i class="material-icons-outlined">add</i>
+        Add
+      </a>
     </div>
   </div>
 </div>
