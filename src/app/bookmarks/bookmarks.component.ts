@@ -10,9 +10,7 @@ import { BookmarkService } from '../shared/bookmark.service';
 export class BookmarksComponent implements OnInit {
   bookmarks: Bookmark[];
 
-  constructor(private bookmarkService: BookmarkService) {
-    console.log(this.bookmarks);
-  }
+  constructor(private bookmarkService: BookmarkService) {}
 
   ngOnInit(): void {
     this.bookmarks = this.bookmarkService.getBookmarks();
