@@ -194,9 +194,7 @@ const baseStyles = style({
   ],
 })
 export class AppComponent implements OnInit {
-  backgrounds: string[] = [
-    'https://images.unsplash.com/photo-1617971230481-9497d6b415f2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max',
-  ];
+  backgrounds: string[] = ['https://source.unsplash.com/random/1920x1080'];
 
   loadingBGImage: boolean;
 
